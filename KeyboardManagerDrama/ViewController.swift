@@ -8,11 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    var activeField: UITextField?
+    var keyboardManager: KeyboardManager!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        keyboardManager = KeyboardManager(vc: self, scrollView: scrollView, activeField: activeField)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeField = nil
+    }
 
 }
 

@@ -14,6 +14,7 @@
 		7322C5301FA86142002C547B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7322C52E1FA86142002C547B /* LaunchScreen.storyboard */; };
 		7322C53B1FA86142002C547B /* KeyboardManagerDramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C53A1FA86142002C547B /* KeyboardManagerDramaTests.swift */; };
 		7322C5461FA86142002C547B /* KeyboardManagerDramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C5451FA86142002C547B /* KeyboardManagerDramaUITests.swift */; };
+		7322C5541FA868CA002C547B /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C5531FA868CA002C547B /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7322C5411FA86142002C547B /* KeyboardManagerDramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardManagerDramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7322C5451FA86142002C547B /* KeyboardManagerDramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManagerDramaUITests.swift; sourceTree = "<group>"; };
 		7322C5471FA86142002C547B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7322C5531FA868CA002C547B /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				7322C5251FA86142002C547B /* AppDelegate.swift */,
 				7322C5271FA86142002C547B /* ViewController.swift */,
+				7322C5531FA868CA002C547B /* KeyboardManager.swift */,
 				7322C5291FA86142002C547B /* Main.storyboard */,
 				7322C52C1FA86142002C547B /* Assets.xcassets */,
 				7322C52E1FA86142002C547B /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				7322C5281FA86142002C547B /* ViewController.swift in Sources */,
 				7322C5261FA86142002C547B /* AppDelegate.swift in Sources */,
+				7322C5541FA868CA002C547B /* KeyboardManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardManagerDrama" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkK-8i-0ES">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-CM-1Ec">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUS-ux-qBN">
+                                                <rect key="frame" x="87" y="487" width="200" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2311849892" green="0.84560269119999998" blue="0.53001701830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="zUS-ux-qBN" firstAttribute="centerX" secondItem="7r2-CM-1Ec" secondAttribute="centerX" id="AVG-uS-dSM"/>
+                                            <constraint firstAttribute="bottom" secondItem="zUS-ux-qBN" secondAttribute="bottom" constant="150" id="FNF-2z-7kU"/>
+                                            <constraint firstAttribute="height" constant="667" id="GNa-ua-La9"/>
+                                            <constraint firstItem="zUS-ux-qBN" firstAttribute="leading" secondItem="7r2-CM-1Ec" secondAttribute="leading" constant="87" id="VuW-Ga-gE9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7r2-CM-1Ec" firstAttribute="leading" secondItem="NkK-8i-0ES" secondAttribute="leading" id="E5z-O3-hJb"/>
+                                    <constraint firstItem="7r2-CM-1Ec" firstAttribute="top" secondItem="NkK-8i-0ES" secondAttribute="top" id="GEp-X9-fZP"/>
+                                    <constraint firstAttribute="bottom" secondItem="7r2-CM-1Ec" secondAttribute="bottom" constant="-20" id="flt-9G-f0k"/>
+                                    <constraint firstItem="7r2-CM-1Ec" firstAttribute="centerX" secondItem="NkK-8i-0ES" secondAttribute="centerX" id="jNB-Cd-8D5"/>
+                                    <constraint firstAttribute="trailing" secondItem="7r2-CM-1Ec" secondAttribute="trailing" constant="1" id="v6N-6X-QRW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NkK-8i-0ES" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3jB-gp-7rc"/>
+                            <constraint firstItem="NkK-8i-0ES" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OrF-y2-SHf"/>
+                            <constraint firstItem="NkK-8i-0ES" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mDd-HN-nis"/>
+                            <constraint firstAttribute="trailing" secondItem="NkK-8i-0ES" secondAttribute="trailing" id="mtH-Kv-dXZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="NkK-8i-0ES" id="V1H-7v-LQ6"/>
+                        <outlet property="textField" destination="zUS-ux-qBN" id="UZA-03-U3t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
